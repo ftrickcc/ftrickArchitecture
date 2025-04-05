@@ -1,0 +1,84 @@
+# Terraform
+infra/gcp/.terraform/
+.terraform/
+*.tfstate.backup
+*.tfstate
+*.tfstate.*
+crash.log
+*.tfplan
+*.backup
+*.tfvars
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraform.lock.hcl
+**/.terraform/*
+*.tfstate*
+*.terraform.lock.hcl
+.terraform.d/
+*.tfstate
+*.tfstate.*
+crash.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+# Docker
+.dockerignore
+*.log
+*.tar
+*.tar.gz
+*.tar.bz2
+
+# Node.js
+node_modules/
+npm-debug.log
+
+# Laravel
+vendor/
+.env
+storage/
+*.log
+
+# Otros
+.DS_Store
+.idea/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pyw
+*.pyz
+
+# Ansible
+*.retry
+*.retry.json
+*.retry.yaml
+*.retry.yml
+*.retry.json
+*.retry.yaml
+
+# Archivos generados
+dist/
+build/
+*.log
+*.log.*
+*.log.*.*
+*.log.*.*.*
+*.log.*.*.*.*
+*.log.*.*.*.*.*
+
+# VS Code
+.vscode/
+
+echo "# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfstate.backup
+.terragrunt-cache/
+.terraform.lock.hcl
+tfplan" >> .gitignore
