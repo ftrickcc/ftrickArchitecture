@@ -1,84 +1,56 @@
-# Terraform
-infra/gcp/.terraform/
-.terraform/
-*.tfstate.backup
-*.tfstate
-*.tfstate.*
-crash.log
-*.tfplan
-*.backup
-*.tfvars
-override.tf
-override.tf.json
-*_override.tf
-*_override.tf.json
-.terraform.lock.hcl
-**/.terraform/*
-*.tfstate*
-*.terraform.lock.hcl
-.terraform.d/
-*.tfstate
-*.tfstate.*
-crash.log
-override.tf
-override.tf.json
-*_override.tf
-*_override.tf.json
-# Docker
-.dockerignore
-*.log
-*.tar
-*.tar.gz
-*.tar.bz2
-
-# Node.js
-node_modules/
-npm-debug.log
-
-# Laravel
-vendor/
+# 💾 1. Archivos de configuración sensibles (NO deben subirse)
 .env
-storage/
-*.log
-
-# Otros
-.DS_Store
-.idea/
-
-# Python
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-*.pyw
-*.pyz
-
-# Ansible
-*.retry
-*.retry.json
-*.retry.yaml
-*.retry.yml
-*.retry.json
-*.retry.yaml
-
-# Archivos generados
-dist/
-build/
-*.log
-*.log.*
-*.log.*.*
-*.log.*.*.*
-*.log.*.*.*.*
-*.log.*.*.*.*.*
-
-# VS Code
-.vscode/
-
-echo "# Terraform
+.env.local
+.env.*.local
+terraform.tfvars
+terraform.tfstate
+terraform.tfstate.backup
 .terraform/
-*.tfstate
-*.tfstate.*
-*.tfstate.backup
-.terragrunt-cache/
-.terraform.lock.hcl
-tfplan" >> .gitignore
+
+# 🗑 2. Archivos de Laravel innecesarios
+/vendor/
+node_modules/
+storage/
+bootstrap/cache/
+public/storage
+public/hot
+homestead.json
+npm-debug.log
+yarn-error.log
+composer.lock
+package-lock.json
+
+# 🖥 3. Archivos del sistema y temporales
+*.log
+*.cache
+*.pid
+*.seed
+*.swp
+*.swo
+*.bak
+*.orig
+.DS_Store
+Thumbs.db
+
+# 🛑 4. Archivos de Docker
+docker-compose.override.yml
+docker-compose.dev.yml
+
+# ⚙ 5. Archivos generados en CI/CD
+cicd/artifacts/
+cicd/tmp/
+.github/workflows/*.log
+
+# ☁ 6. Imágenes y binarios (si usas contenedores)
+*.tar
+*.img
+*.iso
+*.bin
+
+# 🚀 7. Configuración de Kubernetes sensible
+infra/k8s/secrets/
+infra/k8s/configs/
+infra/argocd/secrets.yaml
+
+# 🔧 8. Configuración de ArgoCD sensible
+infra/argocd/private/
